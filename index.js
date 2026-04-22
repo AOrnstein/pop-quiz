@@ -1,4 +1,6 @@
 "use strict";
+// Built typscrpt with terminal:
+//  tsc --ignoreConfig index.ts
 // Track how many questions were answered correctly
 // Global variable per instructions
 let score = 0;

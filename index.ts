@@ -1,3 +1,5 @@
+// Built typscrpt with terminal:
+//  tsc --ignoreConfig index.ts
 // Track how many questions were answered correctly
 // Global variable per instructions
 let score = 0;
@@ -14,7 +16,7 @@ class Question {
     this.options = options;
   }
 
-  print(): string {
+  contentStr(): string {
     let str = this.prompt;
     const strArr: string[] = [this.prompt];
     this.options.forEach((value, index) => {
@@ -46,7 +48,7 @@ class Question {
     do {
       answerInput = prompt(
         `QUESTION ${questionNumber}
-${this.print()}
+${this.contentStr()}
 
 Answer Number (q to quit, s to skip):`,
       );
