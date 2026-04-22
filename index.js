@@ -14,7 +14,7 @@ class Question {
         this.answer = answer;
         this.options = options;
     }
-    print() {
+    contentStr() {
         let str = this.prompt;
         const strArr = [this.prompt];
         this.options.forEach((value, index) => {
@@ -42,7 +42,7 @@ class Question {
         let answerInput = "";
         do {
             answerInput = prompt(`QUESTION ${questionNumber}
-${this.print()}
+${this.contentStr()}
 
 Answer Number (q to quit, s to skip):`);
         } while (!this.validateInput(answerInput));
